@@ -1,0 +1,606 @@
+<div class="margin bg-light">
+  <div class="container pt-5  pb-5">
+    <div class="row ">
+      <div class="col-lg-6 animate__animated animate__fadeInLeft">
+        <img [src]="img1" alt="" class=" img-fluid" width="100%">
+      </div>
+      <div class="col-lg-6 pt-5 animate__animated animate__fadeInRight">
+        <h1 class="font">{{a1}}</h1>
+        <h1 class="font"> {{a2}} </h1>
+        <h1 class="font"> {{a3}}
+        </h1>
+        <h3 class="pt-4 font4">{{a4}}</h3>
+        <div class="container m-0">
+          <div class="row">
+            <div class="col d-flex pt-5" *ngFor="let d of a">
+              <h1 style="font-size:600;"><b>{{d.t1}}</b></h1>
+              <h6 class="pl-2 pt-2">{{d.t2}}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container ">
+  <div id="carouselExampleIndicators" class="carousel slide pt-5" data-ride="carousel" data-mdb-interval="false"
+    data-interval="2000">
+    <!-- <ol class="carousel-indicators ">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol> -->
+    <div class="carousel-inner pt-2">
+      <div class="carousel-item active">
+        <img src="../../assets/img1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item pt-2">
+        <img src="../../assets/img2.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item pt-2">
+        <img src="../../assets/img3.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </button>
+  </div>
+  <hr>
+</div>
+
+
+
+<div class="text-center font2">
+  <p class="pt-5">{{b1}}</p>
+  <p>{{b2}}</p>
+  <h3 style="color: grey;">{{b3}}</h3>
+</div>
+
+<div class="container pt-5">
+  <div class="card-deck ">
+    <div class="card bg-light border-0 rounded pb-5" *ngFor="let d of card1">
+      <img [src]="d.img" class="card-img-top pt-5 pl-5 pr-5">
+      <h4 class="card-title text-center pt-5">{{d.text1}}</h4>
+      <h6 class="card-text text-center">{{d.text2}}</h6>
+    </div>
+  </div>
+  <hr>
+</div>
+
+
+<div class="container pt-5 pb-5">
+  <div class="row ">
+    <div class="col-lg-6 animate__animated animate__fadeInLeft ">
+      <img [src]="img2" alt="" class=" img-fluid" width="100%">
+    </div>
+    <div class="col-lg-6 pt-5 animate__animated animate__fadeInRight">
+      <h5 style="color: gray;">{{c1}}</h5>
+      <h1 class="font3"> {{c2}}</h1>
+      <h1 class="font3">{{c3}} </h1>
+      <p class="pt-4 font4">{{c4}}</p>
+      <h1>{{c5}}</h1>
+      <div *ngFor="let d of text">
+        <p class="font4">{{d.t}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container pt-5 mt-5">
+  <div class="row ">
+    <div class="col-lg-6">
+      <h5 style="color: gray;">{{d1}}</h5>
+      <h1 class="font3"> {{d2}} </h1>
+      <h1 class="font3">{{d3}} </h1>
+      <p class="pt-4 font4">{{d4}}
+      </p>
+      <p class=" font4">{{d5}}
+      </p>
+      <div *ngIf="!isShow">
+      <button type="button" class="btn btn-outline-danger" (click)="show()"
+        style="font-size:20px; border: 2px solid black; color: black;">
+        <h5>{{btn}}</h5>
+      </button>
+    </div>
+    <div *ngIf="isShow">
+      <button type="button" class="btn btn-danger" (click)="show()"
+        style="font-size:20px; border: 2px solid black; color: black;">
+        <h5>{{btn}}</h5>
+      </button>
+    </div>
+    </div>
+    <div class="col-lg-6 ">
+      <div class="card-deck ">
+        <div class="card" style="box-shadow:rgb(207, 203, 203) 0px 1px 5px;" *ngFor="let d of card2">
+          <img [src]="d.img" class="card-img-top pr-4 pt-3" />
+          <div class="card-body">
+            <h4 class="card-title">{{d.text1}}</h4>
+            <p class="card-text font4">{{d.text2}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-deck pt-3">
+        <div class="card" style="box-shadow:rgb(207, 203, 203) 0px 1px 5px;" *ngFor="let d of card3">
+          <img [src]="d.img" class="card-img-top pr-4 pt-3" />
+          <div class="card-body">
+            <h4 class="card-title">{{d.text1}}</h4>
+            <p class="card-text font4">{{d.text2}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container pt-5 pb-5">
+  <div class="row ">
+    <div class="col-lg-6 pt-5">
+      <img [src]="img3" alt="" class=" img-fluid" width="100%">
+    </div>
+    <div class="col-lg-6 pt-5 ">
+      <h3 style="color:rgb(46, 45, 45);" class="pt-5">Solution that grows with you</h3>
+      <p class=" font4">Sodales tempor sapien quaerat ipsum undo congue laoreet turpis
+        neque auctor turpis vitae dolor luctus placerat magna and ligula
+        cursus purus vitae purus an ipsum suscipit</p>
+      <h3 style="color:rgb(46, 45, 45);">Connect your data sources</h3>
+      <p class=" font4">Tempor sapien sodales quaerat ipsum undo congue laoreet turpis neque auctor turpis
+        vitae dolor luctus placerat magna and ligula cursus purus an ipsum vitae suscipit purus</p>
+      <p class=" font4">*Tempor sapien quaerat an ipsum laoreet purus and sapien dolor
+        an ultrice ipsum aliquam undo congue dolor cursus</p>
+      <p class=" font4">*Cursus purus suscipit vitae cubilia magnis volute egestas vitae sapien turpis
+        ultrice auctor congue magna placerat</p>
+    </div>
+  </div>
+</div>
+
+<div class="bg-light pt-5 pb-5">
+  <div class="container pt-5 pb-5">
+    <div class="row ">
+      <div class="col-lg-6 pt-5">
+        <div *ngFor="let d of button">
+          <div class="d-flex">
+            <div *ngIf="!isShow">
+            <button class="rounded-circle btn-outline-danger  p-3 " (click)="show()">{{d.btn}}</button>
+          </div>
+          <div  *ngIf="isShow">
+            <button class="rounded-circle btn-danger  p-3 " (click)="show()">{{d.btn}}</button>
+          </div>
+            <h3 style="color:rgb(46, 45, 45);" class="pl-2 pt-2">{{d.text1}}</h3>
+          </div>
+          <p class=" font4 pl-5">{{d.text2}}</p>
+        </div>
+      </div>
+      <div class="col-lg-6 pt-5">
+        <img [src]="img4" alt="" class=" img-fluid h-100" width="100%">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container pt-5 pb-5">
+  <div class="row pt-5">
+    <div class="col-lg-6">
+      <img [src]="img5" alt="" class=" img-fluid" width="100%">
+    </div>
+    <div class="col-lg-6 pt-5">
+      <h5 style="color: gray;">
+        EASY ONBOARDING</h5>
+      <h1 class="font3"> Achieve more with </h1>
+      <h1 class="font3">better workflows</h1>
+      <p class="pt-4 font4">Nemo ipsam egestas volute turpis egestas ipsum and purus sapien ultrice an
+        aliquam quaerat ipsum augue turpis sapien cursus congue magna purus
+        quaerat at ligula purus egestas magna cursus undo varius purus magnis sapien quaerat</p>
+      <h1>Get more done in less time</h1>
+      <p class="font4">*Sapien quaerat tempor an ipsum laoreet purus and sapien dolor an ultrice
+        ipsum aliquam undo congue cursus dolor</p>
+      <p class="font4">*Purus suscipit cursus vitae cubilia magnis volute egestas vitae sapien
+        turpis ultrice auctor congue magna placerat</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container pt-5 pb-5">
+  <div class="row pt-5">
+    <div class="col-lg-6">
+      <h5 style="color: gray;">
+        EASY INTEGRATION</h5>
+      <h1 class="font3"> Plug your essential</h1>
+      <h1 class="font3">tools in few clicks
+      </h1>
+      <p class="font4 pt-4">Cursus purus suscipit vitae cubilia magnis volute egestas vitae sapien turpis sodales magna
+        undo
+        aoreet primis</p>
+      <p class="font4">Tempor sapien quaerat an ipsum laoreet purus and sapien dolor an ultrice ipsum aliquam undo
+        congue dolor cursus purus
+        congue and ipsum purus sapien a blandit</p>
+    </div>
+    <div class="col-lg-6 pt-5">
+      <img [src]="img6" alt="" class=" img-fluid" width="100%">
+    </div>
+  </div>
+</div>
+
+
+
+<div class=" text-center bg-light pb-5">
+  <p class="pt-5 font5">
+    Track the progress towards
+  </p>
+  <p class="font5"> objectives with key results</p>
+  <p class="font4">Ligula risus auctor tempus magna feugiat lacinia.</p>
+  <img [src]="img7" width="80%" class="img-fluid mx-auto pt-5">
+</div>
+
+
+<div class="container pt-5 pl-5">
+  <div class="row">
+    <div class="col d-lg-flex col-md-6 col-sm-12 col-lg-4" *ngFor="let d of flex">
+      <p class="font3 ">{{d.text1}}</p>
+      <p class="pt-3 pl-3 font4">{{d.p}}</p>
+    </div>
+  </div>
+  <hr>
+</div>
+
+
+<div class="container">
+  <div class=" text-center pb-5 pt-5">
+    <p class="pt-5 font5">
+      Reach your audience through
+    </p>
+    <p class="font5">social media marketing</p>
+    <p class="font4">Ligula risus auctor tempus magna feugiat lacinia.</p>
+  </div>
+
+
+  <div class="card-deck">
+    <div class="card bg-light rounded border-0 pb-5">
+      <div class="card-body text-center ">
+        <h4 class="card-title">{{textC1}}</h4>
+        <p class="card-text font4">{{pC1}}
+        </p>
+        <img [src]="imgC1" class="card-img-top pt-3 pl-5 pr-5">
+      </div>
+    </div>
+    <div class="card bg-light rounded border-0">
+      <div class="card-body text-center ">
+        <img [src]="imgC2" class="card-img-top pt-3 pl-5 pr-5">
+        <h4 class="card-title pt-4">{{textC2}}</h4>
+        <p class="card-text font4">{{pC2}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center pt-5">
+  <p class="font5">
+    The Complete Solutions
+  </p>
+  <p class="font4">
+    Ligula risus auctor tempus magna feugiat lacinia.
+  </p>
+</div>
+
+
+<div class="container pt-5 pb-5">
+  <div class="row pt-5">
+    <div class="col-lg-6">
+      <div *ngFor="let d of card5">
+        <div class="d-flex">
+          <img [src]="d.img">
+          <h4 class="pt-3">{{d.t1}}</h4>
+        </div>
+        <p class="font4 pl-2">{{d.t2}}</p>
+      </div>
+    </div>
+
+    <div class="col-lg-6 ">
+      <img src="https://dsathemes.com/html/martex_1.1/files/images/img-03.png" alt="" class=" img-fluid" width="90%">
+    </div>
+  </div>
+</div>
+
+
+<div class="container pt-5 pb-5">
+  <div class="row pt-5">
+    <div class="col-lg-6">
+
+      <img src="https://dsathemes.com/html/martex_1.1/files/images/img-14.png" alt="" class=" img-fluid" width="100%">
+    </div>
+    <div class="col-lg-6 pt-5">
+      <h5 style="color: gray;">
+        ENGAGEMENT ANALYTICS</h5>
+      <h1 class="font3">Data-driven</h1>
+      <h1 class="font3">digital marketing
+      </h1>
+      <p class="font4 pt-4">*Tempor sapien quaerat undo ipsum laoreet purus and sapien dolor
+        ociis ultrice ipsum aliquam undo congue dolor cursus congue varius magnis</p>
+      <p class="font4">*Cursus purus suscipit vitae cubilia magnis diam volute egestas sapien ultrice auctor</p>
+    </div>
+  </div>
+</div>
+
+<div class="text-center pt-5">
+  <p class="font5">
+    Automate your workflow
+  </p>
+  <p class="font5">with our integrations</p>
+  <p class="font4">
+    Ligula risus auctor tempus magna feugiat lacinia.
+  </p>
+</div>
+
+<div class="container  pt-5">
+  <div class="card-deck">
+    <div class="card ">
+      <img src="../../assets/z.png" class="card-img-top" alt="...">
+    </div>
+    <div class="card">
+      <img src="../../assets/g.png" class="card-img-top" alt="...">
+    </div>
+    <div class="card ">
+      <img src="../../assets/a.png" class="card-img-top" alt="...">
+    </div>
+  </div>
+</div>
+
+<div class="container pt-5">
+  <div class="card-deck">
+    <div class="card ">
+      <img src="../../assets/d.png" class="card-img-top" alt="...">
+    </div>
+    <div class="card">
+      <img src="../../assets/t.png" class="card-img-top" alt="...">
+    </div>
+    <div class="card">
+      <img src="../../assets/gd.png" class="card-img-top" alt="...">
+    </div>
+  </div>
+</div>
+
+<div class="container pt-5">
+  <div class="card-deck ">
+    <div class="card ">
+      <img src="../../assets/z.png" class="card-img-top" alt="...">
+    </div>
+    <div class="card">
+      <img src="../../assets/g.png" class="card-img-top" alt="...">
+    </div>
+    <div class="card">
+      <img src="../../assets/a.png" class="card-img-top" alt="...">
+    </div>
+  </div>
+
+  <div class="text-center pt-5 pb-5">
+    <div *ngIf="!isShow">
+      <button type="button" class="btn btn-outline-danger pl-5 pr-5"
+        style="font-size: 20px; border: 2px solid black; color: black;" (click)="show()">
+        <h5>View all integrations</h5>
+      </button>
+    </div>
+    <div *ngIf="isShow">
+      <button type="button" class="btn btn-danger pl-5 pr-5"
+        style="font-size: 20px; border: 2px solid black; color: black;" (click)="show()">
+        <h5>View all integrations</h5>
+      </button>
+    </div>
+</div>
+
+
+<div class=" bg-light">
+  <div class="container">
+    <div class="text-center pt-5">
+      <p class="font5">
+        Our Happy Customers
+      </p>
+      <p class="font4">
+        Ligula risus auctor tempus magna feugiat lacinia.
+      </p>
+    </div>
+
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-bs-ride="carousel"
+      data-interval="2000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <!-- <img src="..." class="d-block w-100" alt="..."> -->
+          <div class="row pb-5">
+            <div class=" col-md-6 col-lg-4 col-sm-12" *ngFor="let card of card6">
+              <div class="card-deck  pb-5">
+                <div class="card" style="box-shadow:rgb(207, 203, 203) 0px 1px 5px;">
+                  <p class="font4 pt-4 pl-4 pr-4">{{card.text}}</p>
+                  <img [src]="card.img" class="card-img-top">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row pb-5">
+            <div class=" col-md-6 col-lg-4 col-sm-12" *ngFor="let card of card7">
+              <div class="card-deck  pb-5">
+                <div class="card" style="box-shadow:rgb(207, 203, 203) 0px 1px 5px;">
+                  <p class="font4 pt-4 pl-4 pr-4">{{card.text}}</p>
+                  <img [src]="card.img" class="card-img-top">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row pb-5">
+            <div class="row pb-5">
+              <div class="col-md-6 col-lg-4 col-sm-12" *ngFor="let card of card8">
+                <div class="card-deck  pb-5">
+                  <div class="card" style="box-shadow:rgb(207, 203, 203) 0px 1px 5px;">
+                    <p class="font4 pt-4 pl-4 pr-4">{{card.text}}</p>
+                    <img [src]="card.img" class="card-img-top">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="font3 text-center pt-5">
+  <p>
+    Questions & Answers
+  </p>
+  <p class="font4">
+    Ligula risus auctor tempus magna feugiat lacinia.
+  </p>
+</div>
+
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <h3 class="color">1. Getting started with Martex</h3>
+      <p class="font4 pt-2">Etiam amet mauris suscipit in odio integer congue metus and vitae arcu mollis
+        blandit ultrice ligula egestas magna suscipit lectus magna suscipit luctus blandit and laoreet</p>
+      <h3 class="color pt-3">2. What's inside the package?</h3>
+      <p class="font4 pt-2">An enim nullam tempor sapien gravida donec ipsum and enim porta justo integer
+        at velna vitae auctor integer congue undo magna laoreet augue pretium purus pretium ligula</p>
+      <h3 class="color pt-3">3. How do I choose a plan?</h3>
+      <p class="font4 pt-2">1. Fringilla risus, luctus mauris orci auctor purus ligula euismod pretium purus pretium
+        rutrum tempor sapien</p>
+      <p class="font4 pt-2">2. Nemo ipsam egestas volute undo turpis purus lipsum primis aliquam sapien quaerat sodales
+        pretium a purus</p>
+    </div>
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <h3 class="color">4. How does Martex handle my privacy?</h3>
+      <p class="font4 pt-2">Quaerat sodales sapien euismod blandit purus a purus ipsum primis in cubilia laoreet augue
+        luctus dolor luctus</p>
+      <p class="font4 pt-2">An enim nullam tempor sapien gravida donec congue metus. Vitae arcu mollis blandit integer
+        nemo
+        volute velna</p>
+      <h3 class="color pt-3">5. I have an issue with my account</h3>
+      <p class="font4 pt-2">Cubilia laoreet augue egestas and luctus donec curabite diam vitae dapibus libero and
+        quisque gravida donec neque blandit
+        justo aliquam molestie nunc sapien justo</p>
+      <h3 class="color pt-3">6. Can I cancel at anytime?</h3>
+      <p class="font4 pt-2">An enim nullam tempor sapien gravida donec ipsum and enim porta justo integer at velna vitae
+        auctor integer congue undo magna
+        laoreet augue pretium purus pretium ligula</p>
+    </div>
+  </div>
+</div>
+
+<div class="text-center pt-5 pb-5">
+  <button class="rounded-pill h4 p-3 border-0">Have any questions?
+    <a href="https://dsathemes.com/html/martex_1.1/files/contacts.html" style="color: red;">
+      Get In Touch</a></button>
+</div>
+
+<div class="container">
+  <div class="text-center" style="background-color:rgb(106, 64, 148); border-radius: 20px;">
+    <p class="font6 pt-5">Starting with Martex is <br>easy, fast and free</p>
+    <h4 class="" style="color: white;">It only takes a few clicks to get started</h4>
+    <div class="pt-5">
+      <button type="button" class="text-light border-0 pl-4 pr-4 rounded pt-2" style="background-color: red;">
+        <h4>Get started-it's free</h4>
+      </button>
+      <h5 style="color: white;" class="pt-4 pb-5"> Free for 14 days, no credit card required.</h5>
+    </div>
+  </div>
+</div>
+
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-lg-3  col-sm-12 ">
+      <img src="../../assets/martex.png" height="50">
+    </div>
+    <div class="col-lg-2 col-md-3">
+      <h4>Company</h4>
+      <p class="font7 pt-2">About Us</p>
+      <p class="font7">Careers</p>
+      <p class="font7">Our Blog</p>
+      <p class="font7">Contact Us</p>
+    </div>
+    <div class=" col-lg-2 col-md-3 ">
+      <h4>Product</h4>
+      <p class="font7 pt-2">Customers</p>
+      <p class="font7">Integration</p>
+      <p class="font7">Pricing</p>
+      <p class="font7">Help Center</p>
+    </div>
+    <div class=" col-lg-2  col-md-3 ">
+      <h4>Legal</h4>
+      <p class="font7 pt-2">Terms of Use</p>
+      <p class="font7">Privacy Policy</p>
+      <p class="font7">Cookie Policy</p>
+      <p class="font7">Site Map</p>
+    </div>
+    <div class=" col-lg-3  col-md-3">
+      <h4>Connect With Us</h4>
+      <p class="font7">hello@youmain.com</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="32" fill="currentColor" class="bi bi-facebook"
+        viewBox="0 0 16 16" style="color:grey">
+        <path
+          d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="32" fill="currentColor" class="bi bi-twitter"
+        viewBox="0 0 16 16" style="color:grey">
+        <path
+          d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="32" fill="currentColor" class="bi bi-github"
+        viewBox="0 0 16 16" style="color:grey">
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="60" height="32" fill="currentColor" class="bi bi-browser-chrome"
+        viewBox="0 0 16 16" style="color:grey">
+        <path fill-rule="evenodd"
+          d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+      </svg>
+
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-6">
+      <p class="font8 pt-5 ">
+        © 2023 Martex. All Rights Reserved
+      </p>
+    </div>
+    <div class="col-6 text-right pt-5 pb-5">
+      <a href="https://themeforest.net/user/dsathemes/portfolio">
+        <button class="font8 border-0 bg-white">Made with <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+            </svg>
+          </span> by @DSAThemes</button></a>
+    </div>
+  </div>
+</div>

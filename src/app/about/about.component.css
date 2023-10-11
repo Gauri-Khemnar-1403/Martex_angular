@@ -1,0 +1,49 @@
+.margin{
+    margin-top: 60px;
+}
+.font{
+    font-size:70px;
+    font-weight:600;
+    /* color:rgb(70, 68, 68); */
+}
+.font2{
+    font-size:55px;
+    font-weight:650;
+}
+.font3{
+    font-size:55px;
+    font-weight:600;
+}
+.font4{
+    font-size:20px;
+    font-weight:400;
+    color: grey;
+} 
+.bg{
+    background-color: rgb(197, 193, 193);
+    
+}
+.font5{
+    font-size:50px;
+    font-weight:700;
+    color: rgb(39, 39, 46);
+}
+
+ .color{
+    color: rgb(28, 37, 65);
+ }
+ .font6{
+    font-size:50px;
+    font-weight:650;
+    color: white;
+ }
+ .font7{
+    font-size:20px;
+    font-weight:500;
+    color: rgb(104, 101, 101);
+} 
+.font8{
+    font-size:17px;
+    font-weight:500;
+    color: grey;
+} 
